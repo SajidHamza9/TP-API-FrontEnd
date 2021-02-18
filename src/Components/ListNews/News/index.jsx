@@ -20,7 +20,7 @@ const News = ({ title, content, date, id, setList, openModal, setNews }) => {
       <Card>
         <CardHeader>
           <CardTitle to={`/news/${id}`}>
-            {title.substring(0, 30).concat('...')}
+            {title.length > 30 ? title.substring(0, 30).concat('...') : title}
           </CardTitle>
           <CardDate>{date.split('T')[0]}</CardDate>
         </CardHeader>
